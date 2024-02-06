@@ -25,6 +25,7 @@ const copyEmail = () => {
 
 
 <template>
+  <div class="fix">
   <div class="vlR">
     <a href="mailto:friskinip@gmail.com" class="label rotated-label" @click="copyEmail">friskinip@gmail.com</a>
   </div>
@@ -58,6 +59,7 @@ const copyEmail = () => {
       </svg>
     </a>
   </div>
+    </div>
 </template>
 
 
@@ -65,6 +67,12 @@ const copyEmail = () => {
 @font-face {
   font-family: 'Space Mono';
   src: url('https://fonts.gstatic.com/s/spacemono/v5/i7dPIFZifjKcF5UAWdDRaPpZYgMmQxc.woff2') format('woff2');
+}
+.fix {
+  position: fixed;
+  bottom: 0px;
+  right: 1px;
+  left: 1px;
 }
 .github-icon{
   user-select: none;
