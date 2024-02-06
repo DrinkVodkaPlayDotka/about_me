@@ -45,6 +45,24 @@ const changeText = () =>  {
 .disable-link{
   text-decoration: none;
 }
+@keyframes hoverInAnimation {
+  0% {
+    font-size: 50px;
+  }
+  100% {
+    font-size: 70px;
+  }
+}
+
+@keyframes hoverOutAnimation {
+  0% {
+    font-size: 70px;
+  }
+  100% {
+    font-size: 50px;
+  }
+}
+
 .gradient-text-vue {
   font-family: 'Rubik One', sans-serif;
   font-size: 50px;
@@ -53,7 +71,18 @@ const changeText = () =>  {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #0B2349;
+  transition: font-size 0.5s; /* Добавляем плавное изменение размера шрифта */
 }
+
+.gradient-text-vue:hover {
+  animation: hoverInAnimation 0.5s forwards;
+}
+
+.gradient-text-vue:not(:hover) {
+  animation: hoverOutAnimation 0.5s forwards;
+}
+
+
 .gradient-text-fast {
   font-family: 'Rubik One', sans-serif;
   font-size: 50px;
@@ -63,6 +92,15 @@ const changeText = () =>  {
   -webkit-text-fill-color: transparent;
   color: #0B2349;
 }
+
+.gradient-text-fast:hover {
+  animation: hoverInAnimation 0.5s forwards;
+}
+
+.gradient-text-fast:not(:hover) {
+  animation: hoverOutAnimation 0.5s forwards;
+}
+
 .hi-text {
   font-family: 'Space Mono', monospace;
   color: #5da1ff;
@@ -72,6 +110,7 @@ const changeText = () =>  {
   padding-bottom: 20px;
 
 }
+
 .a3-text{
   font-size: 1vh;
   margin-left: 10px;
