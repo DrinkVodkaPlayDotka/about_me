@@ -6,7 +6,7 @@
     <div class="container">
       <div class="box">
         <div class="a1-text pad">About me</div>
-<!--        <img class="me" src="/assets/me/photo_2022-11-20_21-43-10.jpg" alt="Описание изображения">-->
+        <img class="me" src="/assets/me/photo_2022-11-20_21-43-10.jpg" alt="Описание изображения">
         <div class="square"></div>
         <div class="a2-text pad">Hi, my name is Misha Stepanov,<br>
           crazy full stack web developer who wants to explore every tech stack.</div>

@@ -5,7 +5,7 @@
 <template>
 <header class="fix">
   <ol>
-    <li>It's me</li>
+    <li class="">It's me</li>
     <li>Yes</li>
     <li></li>
   </ol>

@@ -71,15 +71,12 @@ const changeText = () =>  {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #0B2349;
-  transition: font-size 0.5s; /* Добавляем плавное изменение размера шрифта */
+  transition: font-size 0.3s ease; /* Добавляем переход для изменения размера шрифта */
+
 }
 
 .gradient-text-vue:hover {
-  animation: hoverInAnimation 0.5s forwards;
-}
-
-.gradient-text-vue:not(:hover) {
-  animation: hoverOutAnimation 0.5s forwards;
+  font-size: 60px;
 }
 
 
@@ -91,14 +88,12 @@ const changeText = () =>  {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #0B2349;
+  transition: font-size 0.3s ease; /* Добавляем переход для изменения размера шрифта */
+
 }
 
 .gradient-text-fast:hover {
-  animation: hoverInAnimation 0.5s forwards;
-}
-
-.gradient-text-fast:not(:hover) {
-  animation: hoverOutAnimation 0.5s forwards;
+  font-size: 60px;
 }
 
 .hi-text {
