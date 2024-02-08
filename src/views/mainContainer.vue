@@ -8,8 +8,8 @@ import StarComponent from "@/components/starComponent.vue";
 
 export default defineComponent({
   components: {
-    StarComponent,
     HeadComponent,
+    StarComponent,
     AboutmeComponent,
     MeComponent,
     BackgroundComponent
@@ -19,9 +19,9 @@ export default defineComponent({
 </script>
 
 <template>
+  <head-component></head-component>
   <star-component></star-component>
   <background-component />
-  <head-component></head-component>
   <me-component></me-component>
   <aboutme-component></aboutme-component>
 </template>
