@@ -5,9 +5,12 @@ import MeComponent from "@/components/meComponent.vue";
 import AboutmeComponent from "@/components/aboutmeComponent.vue";
 import HeadComponent from "@/components/headComponent.vue";
 import StarComponent from "@/components/starComponent.vue";
+import SkillsComponent from "@/components/skillsComponent.vue";
 
 export default defineComponent({
   components: {
+    SkillsComponent,
+
     HeadComponent,
     StarComponent,
     AboutmeComponent,
@@ -24,6 +27,7 @@ export default defineComponent({
   <background-component />
   <me-component></me-component>
   <aboutme-component></aboutme-component>
+  <skills-component></skills-component>
 </template>
 
 <style scoped></style>
