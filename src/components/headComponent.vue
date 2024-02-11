@@ -2,14 +2,18 @@
 import {onMounted, onUnmounted, ref} from "vue";
 
 const show = ref(false)
-const orange_first =ref(false)
-const orange_second =ref(false)
+const orange_first = ref(true)
+const orange_second = ref(false)
+const orange_third = ref(false)
 
 const orange_f = () => {
   orange_first.value = window.scrollY < 500;
 }
 const orange_s = () => {
-  orange_second.value = window.scrollY > 500 && window.screenY < 800;
+  orange_second.value = (!orange_first.value && window.scrollY < 1250);
+}
+const orange_t = () => {
+  orange_third.value = (!orange_first.value && !orange_second.value && window.scrollY < 2000)
 }
 const showTest = () => {
   show.value = window.scrollY > 300
@@ -18,13 +22,17 @@ onMounted(() => {
   window.addEventListener('scroll', showTest);
   window.addEventListener('scroll', orange_f);
   window.addEventListener('scroll', orange_s);
+  window.addEventListener('scroll', orange_t);
+
 
 });
 
-onUnmounted(() => {
+onUnmounted(() => {  window.removeEventListener('scroll', orange_s);
+
   window.removeEventListener('scroll', showTest);
   window.removeEventListener('scroll', orange_f);
   window.removeEventListener('scroll', orange_s);
+  window.removeEventListener('scroll', orange_t);
 
 
 });
@@ -32,7 +40,11 @@ const scrollToTop = () => {
   window.scrollTo({top: 0, behavior: 'smooth'})
 }
 const scrollToAbout = () => {
-  window.scrollTo({top: 501, behavior: 'smooth'})
+  window.scrollTo({top: 700, behavior: 'smooth'})
+}
+const scrollToSkills = () =>{
+  window.scrollTo({top: 1500, behavior: 'smooth'})
+
 }
 </script>
 
@@ -42,6 +54,7 @@ const scrollToAbout = () => {
       <li class="me" @click="scrollToTop">It's <span class="rgb">me</span></li>
       <li class="list onClick" @click="scrollToTop" :class="{'orange': orange_first}">literally me</li>
       <li class="list onClick" @click="scrollToAbout" :class="{'orange': orange_second}">about me</li>
+      <li class="list onClick" @click="scrollToSkills" :class="{'orange': orange_third}">Skills</li>
 
     </ol>
 
@@ -51,15 +64,19 @@ const scrollToAbout = () => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
 .fix {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1002;
 }
-.onClick{
+
+.onClick {
   cursor: pointer;
 
 }
+
 .box1 {
   margin-top: 0;
   background-color: rgba(47, 44, 44, 0.5);
@@ -88,12 +105,14 @@ ol {
   user-select: none;
   cursor: pointer;
 }
-.orange{
+
+.orange {
   color: #ee8241;
   cursor: pointer;
 
 
 }
+
 .list {
   margin-left: 20%;
   margin-top: 1%;

@@ -73,6 +73,7 @@ const copyEmail = () => {
   bottom: 0px;
   right: 1px;
   left: 1px;
+  z-index: 1003;
 }
 .github-icon{
   user-select: none;

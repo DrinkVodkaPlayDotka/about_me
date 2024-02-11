@@ -6,11 +6,14 @@ import AboutmeComponent from "@/components/aboutmeComponent.vue";
 import HeadComponent from "@/components/headComponent.vue";
 import StarComponent from "@/components/starComponent.vue";
 import SkillsComponent from "@/components/skillsComponent.vue";
+import ProjectsComponent from "@/components/projectsComponent.vue";
+import TestComp from "@/components/testComp.vue";
 
 export default defineComponent({
   components: {
+    TestComp,
+    ProjectsComponent,
     SkillsComponent,
-
     HeadComponent,
     StarComponent,
     AboutmeComponent,
@@ -28,6 +31,7 @@ export default defineComponent({
   <me-component></me-component>
   <aboutme-component></aboutme-component>
   <skills-component></skills-component>
+  <projects-component></projects-component>
 </template>
 
 <style scoped></style>
