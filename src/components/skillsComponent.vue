@@ -6,6 +6,7 @@
   <div class="container">
     <div class="box">
       <div class="skill">My Skills</div>
+      <div class="line"></div>
       <div class="about">Here are few technologies i've been used and working recently</div>
       <div class="svg-container">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" id="typescript">
@@ -231,6 +232,21 @@ svg:hover {
   width: 10%;
 
 }
+
+.line {
+  width: 2%;
+  height: 5px;
+  background: #e16b40;
+  position: absolute;
+  left: 50%;
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
+.skill:hover + .line{
+  width: 8%;
+
+}
+
 .svg-container {
   display: flex;
   justify-content: space-around;
@@ -240,6 +256,7 @@ svg:hover {
 
 
 .container {
+  position: relative;
   margin-top: 25%;
   display: flex;
   justify-content: center;
@@ -259,13 +276,13 @@ svg:hover {
   color: white;
   font-family: 'Protest Riot', sans-serif;
   font-size: 250%;
-
 }
 
 .about {
   font-size: 150%;
   text-align: center;
   color: #bb0fbb;
+  margin-top: 10px;
   font-family: 'Single Day', cursive;
 }
 </style>
