@@ -99,7 +99,6 @@ span::before {
   }
 }
 
-/* Styles for the stars animation */
 span:nth-child(1) {
   top: 0;
   right: 0;

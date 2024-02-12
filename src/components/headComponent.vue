@@ -5,6 +5,7 @@ const show = ref(false)
 const orange_first = ref(true)
 const orange_second = ref(false)
 const orange_third = ref(false)
+const orange_fourth = ref(false)
 
 const orange_f = () => {
   orange_first.value = window.scrollY < 500;
@@ -15,6 +16,9 @@ const orange_s = () => {
 const orange_t = () => {
   orange_third.value = (!orange_first.value && !orange_second.value && window.scrollY < 2000)
 }
+const orange_fe = () => {
+  orange_fourth.value = (!orange_first.value && !orange_second.value && !orange_third.value && window.scrollY < 2500)
+}
 const showTest = () => {
   show.value = window.scrollY > 300
 }
@@ -23,6 +27,7 @@ onMounted(() => {
   window.addEventListener('scroll', orange_f);
   window.addEventListener('scroll', orange_s);
   window.addEventListener('scroll', orange_t);
+  window.addEventListener('scroll', orange_fe);
 
 
 });
@@ -33,6 +38,8 @@ onUnmounted(() => {  window.removeEventListener('scroll', orange_s);
   window.removeEventListener('scroll', orange_f);
   window.removeEventListener('scroll', orange_s);
   window.removeEventListener('scroll', orange_t);
+  window.removeEventListener('scroll', orange_fe);
+
 
 
 });
@@ -46,6 +53,10 @@ const scrollToSkills = () =>{
   window.scrollTo({top: 1500, behavior: 'smooth'})
 
 }
+const scrollToProjects = () =>{
+  window.scrollTo({top: 2200, behavior: 'smooth'})
+
+}
 </script>
 
 <template>
@@ -55,6 +66,7 @@ const scrollToSkills = () =>{
       <li class="list onClick" @click="scrollToTop" :class="{'orange': orange_first}">literally me</li>
       <li class="list onClick" @click="scrollToAbout" :class="{'orange': orange_second}">about me</li>
       <li class="list onClick" @click="scrollToSkills" :class="{'orange': orange_third}">Skills</li>
+      <li class="list onClick" @click="scrollToProjects" :class="{'orange': orange_fourth}">Projects</li>
 
     </ol>
 
@@ -114,7 +126,7 @@ ol {
 }
 
 .list {
-  margin-left: 20%;
+  margin-left: 15%;
   margin-top: 1%;
   text-align: center;
 

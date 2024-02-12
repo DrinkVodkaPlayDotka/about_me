@@ -8,6 +8,5 @@
 </template>
 
 <style >
-@import "./styles/global-styles.css";
 
 </style>

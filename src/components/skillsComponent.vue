@@ -1,3 +1,4 @@
+
 <script setup lang="ts">
 
 </script>
@@ -211,6 +212,7 @@
           </g>
         </svg>
 
+
       </div>
     </div>
   </div>
@@ -264,7 +266,16 @@ svg:hover {
   height: 40vh;
   text-align: center;
   width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Горизонтальное смещение, вертикальное смещение, размытие, цвет */
+  transition: box-shadow 0.3s ease;
+
 }
+.container:hover {
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.3), /* внешняя тень */
+  inset 0 0 10px rgba(255, 255, 255, 0.5); /* внутренняя тень белого цвета */
+}
+
+
 
 .box {
   width: 70%;
@@ -286,3 +297,6 @@ svg:hover {
   font-family: 'Single Day', cursive;
 }
 </style>
+
+
+
