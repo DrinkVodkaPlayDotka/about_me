@@ -54,7 +54,7 @@ const scrollToSkills = () =>{
 
 }
 const scrollToProjects = () =>{
-  window.scrollTo({top: 2200, behavior: 'smooth'})
+  window.scrollTo({top: 2400, behavior: 'smooth'})
 
 }
 </script>

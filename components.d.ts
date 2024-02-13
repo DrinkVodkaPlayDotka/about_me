@@ -11,6 +11,7 @@ declare module 'vue' {
     BackgroundComponent: typeof import('./src/components/backgroundComponent.vue')['default']
     BCarousel: typeof import('bootstrap-vue-next')['BCarousel']
     BCarouselSlide: typeof import('bootstrap-vue-next')['BCarouselSlide']
+    ConnectComponent: typeof import('./src/components/connectComponent.vue')['default']
     HeadComponent: typeof import('./src/components/headComponent.vue')['default']
     MeComponent: typeof import('./src/components/meComponent.vue')['default']
     ProjectsComponent: typeof import('./src/components/projectsComponent.vue')['default']

@@ -15,7 +15,7 @@ const changePhoto = () => {
     } else {
       currentPhoto.value = 0;
     }
-  }, 500);
+  }, 300);
 }
 const changePhotoleft = () => {
   anim.value = true
@@ -33,6 +33,7 @@ const changePhotoleft = () => {
 
 <template>
   <div class="container">
+
     <div class="box" >
       <div  class="opac cont" :class="{'animation': anim == true}"
             v-for="(photo, index) in photos" :key="index">
@@ -49,15 +50,16 @@ const changePhotoleft = () => {
 </template>
 <style scoped>
 .btn2 {
+  opacity: 0.5;
   width: 40px;
   height: 40px;
-  background-color: #00BFA6;
+  background-color: #808080;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
   border-radius: 50%;
-  border: 2px dashed #00BFA6;
+  border: 2px dashed #808080;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .4s;
   position: absolute;
@@ -66,9 +68,9 @@ const changePhotoleft = () => {
 }
 
 .btn2:hover {
-  border: 2px dashed #00BFA6;
+  border: 2px dashed #808080;
   background-color: #fff;
-  color: #00BFA6;
+  color: #808080;
 }
 
 .btn2:active {
@@ -78,15 +80,17 @@ const changePhotoleft = () => {
   font-size: 20px;
 }
 .btn1 {
+  opacity: 0.5;
+
   width: 40px;
   height: 40px;
-  background-color: #00BFA6;
+  background-color: #808080;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
   border-radius: 50%;
-  border: 2px dashed #00BFA6;
+  border: 2px dashed #808080;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .4s;
   position: absolute; /* позволяет задать позицию кнопки относительно родительского контейнера */
@@ -95,9 +99,9 @@ const changePhotoleft = () => {
 }
 
 .btn1:hover {
-  border: 2px dashed #00BFA6;
+  border: 2px dashed #808080;
   background-color: #fff;
-  color: #00BFA6;
+  color: #808080;
 }
 
 .btn1:active {
@@ -115,11 +119,42 @@ const changePhotoleft = () => {
 
   width: 100%;
 }
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1); /* Белый с низкой прозрачностью */
+  }
+  25% {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3); /* Белый средней прозрачности */
+  }
+  50% {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5); /* Светлый белый */
+  }
+  75% {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); /* Белый средней прозрачности */
+  }
+  100% {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8); /* Белый с низкой прозрачностью */
+  }
+}
+
+
 .box {
-  width: 30%;
-  height: 100%;
-  background: white;
+  width: 20%;
+  height: 80%;
+  background: #808080;
   position: relative;
+  border-radius: 25px;
+  transition: transform 0.5s ease , transform 0.3s ease;
+
+
+}
+
+.box:hover{
+  animation: borderGlow 4s forwards;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2) perspective(1000px) rotateX(20deg);
+
 }
 
 
@@ -142,5 +177,8 @@ const changePhotoleft = () => {
 img{
   width: 100%;
   height: 400px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  opacity: 1 !important;
 }
 </style>
