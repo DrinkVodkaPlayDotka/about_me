@@ -8,9 +8,11 @@ import StarComponent from "@/components/starComponent.vue";
 import SkillsComponent from "@/components/skillsComponent.vue";
 import ProjectsComponent from "@/components/projectsComponent.vue";
 import TestComp from "@/components/testComp.vue";
+import ConnectComponent from "@/components/connectComponent.vue";
 
 export default defineComponent({
   components: {
+    ConnectComponent,
     TestComp,
     ProjectsComponent,
     SkillsComponent,
@@ -32,6 +34,7 @@ export default defineComponent({
   <aboutme-component></aboutme-component>
   <skills-component></skills-component>
   <projects-component></projects-component>
+  <connect-component></connect-component>
 </template>
 
 <style scoped></style>
