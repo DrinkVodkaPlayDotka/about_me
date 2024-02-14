@@ -3,6 +3,7 @@
 </script>
 
 <template>
+
   <div class="container">
 
     <form
@@ -13,11 +14,12 @@
         <input type="email" name="email" class="input-field email" placeholder="Email">
       </label>
       <label class="input-label">
-        <textarea name="message" class="input-field area"  placeholder="Type your message here..." ></textarea>
+        <textarea name="message" type="message" class="input-field area"  placeholder="Type your message here..." ></textarea>
       </label>
       <button type="submit" class="button"><span>Send</span></button>
 
     </form>
+    <span class="line"></span>
   </div>
 </template>
 
@@ -47,14 +49,53 @@
 .input-field.area {
   height: 10rem;
   width: 500px;
+
 }
 .input-field {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 3px solid #FFA500;
   border-radius: 4px;
-}
+  background-color:transparent;
+  color: white;
+  transition: box-shadow 0.3s ease;
 
+}
+.input-field:hover{
+  box-shadow:
+      rgba(255, 165, 0, 0.4) 0px 2px 4px,
+      rgba(255, 165, 0, 0.3) 0px 7px 13px -3px,
+      rgba(255, 165, 0, 0.2) 0px -3px 0px inset; /* Оранжевая тень */
+}
+.line{
+  position: absolute;
+  width: 5px;
+  height: 35vh;
+  right: 60vh;
+  background-image: linear-gradient(to bottom, #ffffff, #cccccc, #ffa500); /* Градиентный фон */
+  animation: colorChange 10s infinite alternate;
+
+}
+input[type="email"]::placeholder {
+    color: #FFA500;
+    outline:none;
+}
+textarea[type="message"]::placeholder {
+  color: #FFA500;
+
+}
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
 button {
   position: relative;
   display: flex;
