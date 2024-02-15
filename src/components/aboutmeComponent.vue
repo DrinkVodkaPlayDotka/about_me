@@ -80,7 +80,7 @@ ol {
   font-size: 25px;
   font-family: 'Protest Guerrilla', sans-serif;
   text-transform: uppercase;
-  background: linear-gradient(45deg, #0c80c7 33%, #e8600c 66%, #c28341);
+  background: linear-gradient(45deg, #0c80c7 33%, #ee8241 66%, #c28341);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: colorChange 2s infinite alternate;

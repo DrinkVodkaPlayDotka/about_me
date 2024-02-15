@@ -33,7 +33,7 @@ const changePhotoleft = () => {
 
 <template>
   <div class="container">
-
+    <span class="proj">Projects</span>
     <div class="box" >
       <div  class="opac cont" :class="{'animation': anim == true}"
             v-for="(photo, index) in photos" :key="index">
@@ -49,6 +49,21 @@ const changePhotoleft = () => {
   </div>
 </template>
 <style scoped>
+.proj {
+  position: absolute;
+  top: calc(100% - 80% - 17%);
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+
+
+
 .btn2 {
   opacity: 0.5;
   width: 40px;
