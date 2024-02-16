@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     AboutmeComponent: typeof import('./src/components/aboutmeComponent.vue')['default']
     BackgroundComponent: typeof import('./src/components/backgroundComponent.vue')['default']
+    BasementComponent: typeof import('./src/components/basementComponent.vue')['default']
     BCarousel: typeof import('bootstrap-vue-next')['BCarousel']
     BCarouselSlide: typeof import('bootstrap-vue-next')['BCarouselSlide']
     ConnectComponent: typeof import('./src/components/connectComponent.vue')['default']

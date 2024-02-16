@@ -78,7 +78,7 @@ const scrollToCon = () =>{
       <li class="list onClick" @click="scrollToAbout" :class="{'orange': orange_second}"><a>about me </a> </li>
       <li class="list onClick" @click="scrollToSkills" :class="{'orange': orange_third}"><a>Skills </a> </li>
       <li class="list onClick" @click="scrollToProjects" :class="{'orange': orange_fourth}"><a>Projects </a> </li>
-      <li class="bn39 onClick" @click="scrollToCon"><button :class="{'orange2': orange_five}" >CONNECT</button></li>
+      <li class="bn39 onClick r" @click="scrollToCon"><button :class="{'orange2': orange_five}" >CONNECT</button></li>
 
     </ol>
 
@@ -89,9 +89,10 @@ const scrollToCon = () =>{
 @import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+
 button{
   color: rgba(255,255,255,.5);
-  left: 450%;
+  left: 600%;
   border:none;
   background-color: transparent;
   font-size:30px;

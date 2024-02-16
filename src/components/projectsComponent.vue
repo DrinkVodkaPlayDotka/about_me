@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {ref} from "vue";
 
-let photos: string[] = ["https://img.freepik.com/free-photo/web-template-website-design-concept_53876-125608.jpg", "https://thumb.tildacdn.com/tild3061-3934-4461-a265-333735323466/-/resize/824x/-/format/webp/Smartiqa_Automation_.png", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKfAUssiqkUNJvIPed8EhCg8mHgToqiosaz9fw2QRABQ&s"];
+let photos: string[] = ["http://kalinkovichi.globalmarket.by/wp-content/themes/globalmarket/thumb.php?src=http://kalinkovichi.globalmarket.by/wp-content/themes/globalmarket/img/default_image.jpg&w=144&h=88"];
 let disc: string[] = ["Писал пиццерию с испольвонаием всякой шняги и т.д","писал сайт типо что-то в духе брони отелей", "а тут телеграм бота на c# и всяё такое"]
 const currentPhoto = ref<number>(0);
 const anim = ref<boolean>(false);

@@ -9,9 +9,11 @@ import SkillsComponent from "@/components/skillsComponent.vue";
 import ProjectsComponent from "@/components/projectsComponent.vue";
 import TestComp from "@/components/testComp.vue";
 import ConnectComponent from "@/components/connectComponent.vue";
+import BasementComponent from "@/components/basementComponent.vue";
 
 export default defineComponent({
   components: {
+    BasementComponent,
     ConnectComponent,
     TestComp,
     ProjectsComponent,

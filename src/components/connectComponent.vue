@@ -5,7 +5,7 @@
 <template>
 
   <div class="container">
-
+    <span class="con">Connect with me</span>
     <form
         action="https://formspree.io/f/mwkgovln"
         method="POST"
@@ -20,10 +20,28 @@
 
     </form>
     <span class="line"></span>
+
   </div>
 </template>
 
 <style scoped>
+.list{
+  position: absolute;
+  left: 130vh;
+  bottom: 20vh;
+  list-style:none;
+
+}
+li{
+  list-style:none;
+
+}
+.con{
+  position: absolute;
+  top: calc(100% - 80% - 17%);
+  left: 60%;
+  transform: translateX(-50%);
+}
 .container {
 
   position: relative;
@@ -36,7 +54,9 @@
   text-align: center;
   width: 100%;
 }
-
+.li{
+  margin-bottom: 5vh;
+}
 .input-label {
   display: block;
   margin-bottom: 1rem;
