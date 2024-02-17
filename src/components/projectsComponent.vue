@@ -2,10 +2,17 @@
 import {ref} from "vue";
 
 let photos: string[] = ["http://kalinkovichi.globalmarket.by/wp-content/themes/globalmarket/thumb.php?src=http://kalinkovichi.globalmarket.by/wp-content/themes/globalmarket/img/default_image.jpg&w=144&h=88"];
-let disc: string[] = ["Писал пиццерию с испольвонаием всякой шняги и т.д","писал сайт типо что-то в духе брони отелей", "а тут телеграм бота на c# и всяё такое"]
+let disc: string[] = ["Шняга шнядная,жизнь общажная", "а тут телеграм бота на c# и всяё такое"]
 const currentPhoto = ref<number>(0);
 const anim = ref<boolean>(false);
+const checkEl = ref<boolean>(false)
 
+const check = () => {
+  checkEl.value = true
+}
+const checkOut = () =>{
+  checkEl.value = false
+}
 const changePhoto = () => {
   anim.value = true
   setTimeout(() => {
@@ -24,7 +31,7 @@ const changePhotoleft = () => {
     if (currentPhoto.value != 0) {
       currentPhoto.value -= 1;
     } else {
-      currentPhoto.value =  photos.length - 1;
+      currentPhoto.value = photos.length - 1;
     }
   }, 500);
 }
@@ -33,35 +40,64 @@ const changePhotoleft = () => {
 
 <template>
   <div class="container">
-    <span class="proj">Projects</span>
-    <div class="box" >
-      <div  class="opac cont" :class="{'animation': anim == true}"
-            v-for="(photo, index) in photos" :key="index">
+    <span class="proj" :class="{'proj2': checkEl}">Projects</span>
+    <div class="box">
+      <div @mouseover="check" @mouseout="checkOut" class="opac cont" :class="{'animation': anim == true}"
+           v-for="(photo, index) in photos" :key="index">
         <img v-if="index === currentPhoto" :src="photo" :alt="'Изображение ' " :key="index"/>
-        <div  v-if="index === currentPhoto">{{disc[index]}}</div>
+        <div v-if="index === currentPhoto">{{ disc[index] }}</div>
       </div>
 
-      <button class="btn1 tick" @click="changePhoto"> > </button>
-      <button  class="btn2 tick" @click="changePhotoleft"> &lt; </button>
+      <button @mouseover="check"  @mouseout="checkOut" class="btn1 tick" @click="changePhoto"> ></button>
+      <button @mouseover="check"  @mouseout="checkOut" class="btn2 tick" @click="changePhotoleft"> &lt;</button>
 
     </div>
 
   </div>
 </template>
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Protest+Riot&display=swap');
+
 .proj {
   position: absolute;
   top: calc(100% - 80% - 17%);
   left: 50%;
   transform: translateX(-50%);
+  font-family: 'Protest Riot', sans-serif;
 
-  color: #fff;
+  color: #222;
   font-size: 24px;
   font-weight: bold;
-
+  letter-spacing: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
 }
-
-
+.proj2{
+  color: #fff;
+  text-shadow: 0 0 5px #03e9f4,
+  0 0 25px #03e9f4,
+  0 0 50px #03e9f4,
+  0 0 100px #03e9f4;
+}
+.proj2{
+  color: #fff;
+  text-shadow: 0 0 5px #03e9f4,
+  0 0 25px #03e9f4,
+  0 0 50px #03e9f4,
+  0 0 100px #03e9f4;
+  position: absolute;
+  top: calc(100% - 80% - 17%);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Protest Riot', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
 
 
 .btn2 {
@@ -91,9 +127,11 @@ const changePhotoleft = () => {
 .btn2:active {
   background-color: #87dbd0;
 }
-.tick{
+
+.tick {
   font-size: 20px;
 }
+
 .btn1 {
   opacity: 0.5;
 
@@ -134,6 +172,7 @@ const changePhotoleft = () => {
 
   width: 100%;
 }
+
 @keyframes borderGlow {
   0% {
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1); /* Белый с низкой прозрачностью */
@@ -159,12 +198,12 @@ const changePhotoleft = () => {
   background: #808080;
   position: relative;
   border-radius: 25px;
-  transition: transform 0.5s ease , transform 0.3s ease;
+  transition: transform 0.5s ease, transform 0.3s ease;
 
 
 }
 
-.box:hover{
+.box:hover {
   animation: borderGlow 4s forwards;
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
@@ -173,12 +212,12 @@ const changePhotoleft = () => {
 }
 
 
-
 .opac {
   opacity: 1;
 }
+
 .animation {
-  animation: fadeOut 0.5s forwards; /* применяем анимацию fadeOut */
+  animation: fadeOut 0.5s forwards;
 }
 
 @keyframes fadeOut {
@@ -189,7 +228,8 @@ const changePhotoleft = () => {
     opacity: 0;
   }
 }
-img{
+
+img {
   width: 100%;
   height: 400px;
   border-top-left-radius: 25px;

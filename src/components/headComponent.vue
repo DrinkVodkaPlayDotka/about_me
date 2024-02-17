@@ -33,8 +33,6 @@ onMounted(() => {
   window.addEventListener('scroll', orange_t);
   window.addEventListener('scroll', orange_fe);
   window.addEventListener('scroll', orange_fi);
-
-
 });
 
 onUnmounted(() => {  window.removeEventListener('scroll', orange_s);
@@ -90,17 +88,19 @@ const scrollToCon = () =>{
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
 
-button{
+button {
   color: rgba(255,255,255,.5);
-  left: 600%;
-  border:none;
+  border: none;
   background-color: transparent;
-  font-size:30px;
-  text-transform:capitalize;
-  cursor:pointer;
-  transform:all 0.3s;
-  position:relative;
+  font-size: 30px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: absolute;
+  top: 20px;
+  right: 2%;
 }
+
 button:before{
   content:"";
   position :absolute;

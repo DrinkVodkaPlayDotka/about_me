@@ -63,17 +63,19 @@ const changeText = () =>  {
   }
 }
 
+
 .gradient-text-vue {
   font-family: 'Rubik One', sans-serif;
   font-size: 50px;
   text-transform: uppercase;
   background: linear-gradient(45deg, #20c07d 33%, #499eb7 66%, #00ffa6);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #0B2349;
-  transition: font-size 0.3s ease; /* Добавляем переход для изменения размера шрифта */
-
+  transition: font-size 0.3s ease;
 }
+
 
 .gradient-text-vue:hover {
   font-size: 60px;
@@ -85,8 +87,7 @@ const changeText = () =>  {
   font-size: 50px;
   text-transform: uppercase;
   background: linear-gradient(135deg, #ff6b6b, #790c5a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;  -webkit-text-fill-color: transparent;
   color: #0B2349;
   transition: font-size 0.3s ease; /* Добавляем переход для изменения размера шрифта */
 

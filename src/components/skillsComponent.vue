@@ -1,20 +1,58 @@
-
 <script setup lang="ts">
+import { ref } from 'vue';
+const lineColor = ref('#e16b40');
 
+const changeColor1 = () => {
+  lineColor.value = '#007acc';
+};
+const changeColor2 = () => {
+  lineColor.value = '#800080';
+};
+const changeColor3 = () => {
+  lineColor.value = 'orange';
+};
+const changeColor4 = () => {
+  lineColor.value = 'skyblue';
+};
+const changeColor5 = () => {
+  lineColor.value = '#FFFF00';
+};
+const changeColor6 = () => {
+  lineColor.value = '#0404e0';
+};
+const changeColor7 = () => {
+  lineColor.value = '#42b883';
+};
+const changeColor8 = () => {
+  lineColor.value = '#336791';
+};
+const changeColor9 = () => {
+  lineColor.value = '#d7a806';
+};
+const changeColor10 = () => {
+  lineColor.value = '#009688';
+};
+const changeColor11 = () => {
+  lineColor.value = 'black';
+};
+
+const resetColor = () => {
+  lineColor.value = '#e16b40';
+};
 </script>
 
 <template>
   <div class="container">
     <div class="box">
       <div class="skill">My Skills</div>
-      <div class="line"></div>
+      <div class="line" :style="{ backgroundColor: lineColor }"></div>
       <div class="about">Here are few technologies i've been used and working recently</div>
       <div class="svg-container">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" id="typescript">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" id="svg-1"  @mouseover="changeColor1" @mouseleave="resetColor">
           <path fill="#007acc"
                 d="M2,63.91v62.5H127V1.41H2Zm100.73-5a15.56,15.56,0,0,1,7.82,4.5,20.58,20.58,0,0,1,3,4c0,.16-5.4,3.81-8.69,5.85-.12.08-.6-.44-1.13-1.23a7.09,7.09,0,0,0-5.87-3.53c-3.79-.26-6.23,1.73-6.21,5a4.58,4.58,0,0,0,.54,2.34c.83,1.73,2.38,2.76,7.24,4.86,8.95,3.85,12.78,6.39,15.16,10,2.66,4,3.25,10.46,1.45,15.24-2,5.2-6.9,8.73-13.83,9.9a38.32,38.32,0,0,1-9.52-.1A23,23,0,0,1,80,109.19c-1.15-1.27-3.39-4.58-3.25-4.82a9.34,9.34,0,0,1,1.15-.73L82.5,101l3.59-2.08.75,1.11a16.78,16.78,0,0,0,4.74,4.54c4,2.1,9.46,1.81,12.16-.62a5.43,5.43,0,0,0,.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48,16.48,0,0,1-3.43-6.25,25,25,0,0,1-.22-8c1.33-6.23,6-10.58,12.82-11.87A31.66,31.66,0,0,1,102.73,58.93ZM73.39,64.15l0,5.12H57.16V115.5H45.65V69.26H29.38v-5a49.19,49.19,0,0,1,.14-5.16c.06-.08,10-.12,22-.1L73.33,59Z"></path>
         </svg>
-        <svg viewBox="-16 0 288 288" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        <svg viewBox="-16 0 288 288" version="1.1" xmlns="http://www.w3.org/2000/svg" id="svg-2" @mouseover="changeColor2" @mouseleave="resetColor"
              xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -39,7 +77,7 @@
           </g>
         </svg>
 
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" id="svg-3" @mouseover="changeColor3" @mouseleave="resetColor">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
@@ -51,7 +89,7 @@
           </g>
         </svg>
 
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" id="svg-4" @mouseover="changeColor4" @mouseleave="resetColor">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
@@ -62,7 +100,7 @@
                 fill="white"></path>
           </g>
         </svg>
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" id="svg-5" @mouseover="changeColor5" @mouseleave="resetColor">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
@@ -76,7 +114,7 @@
           </g>
         </svg>
         <svg xmlns="http://www.w3.org/2000/svg" width="2222" height="2500" preserveAspectRatio="xMinYMin meet"
-             viewBox="0 0 256 288" id="c">
+             viewBox="0 0 256 288" id="svg-6" @mouseover="changeColor6" @mouseleave="resetColor">
           <path fill="#5C8DBC"
                 d="M255.569 84.72c-.002-4.83-1.035-9.098-3.124-12.761-2.052-3.602-5.125-6.621-9.247-9.008-34.025-19.619-68.083-39.178-102.097-58.817-9.17-5.294-18.061-5.101-27.163.269C100.395 12.39 32.59 51.237 12.385 62.94 4.064 67.757.015 75.129.013 84.711 0 124.166.013 163.62 0 203.076c.002 4.724.991 8.909 2.988 12.517 2.053 3.711 5.169 6.813 9.386 9.254 20.206 11.703 88.02 50.547 101.56 58.536 9.106 5.373 17.997 5.565 27.17.269 34.015-19.64 68.075-39.198 102.105-58.817 4.217-2.44 7.333-5.544 9.386-9.252 1.994-3.608 2.985-7.793 2.987-12.518 0 0 0-78.889-.013-118.345"></path>
           <path fill="#1A4674"
@@ -90,7 +128,7 @@
           <path fill="#FFF"
                 d="M164.619 164.616c-7.248 12.854-21.021 21.541-36.828 21.541-15.71 0-29.405-8.578-36.69-21.296a42.062 42.062 0 0 1-5.574-20.968c0-23.341 18.923-42.263 42.264-42.263 15.609 0 29.232 8.471 36.553 21.059l36.941-21.272c-14.683-25.346-42.096-42.398-73.494-42.398-46.876 0-84.875 38-84.875 84.874 0 15.378 4.091 29.799 11.241 42.238 14.646 25.48 42.137 42.637 73.634 42.637 31.555 0 59.089-17.226 73.714-42.781l-36.886-21.371"></path>
         </svg>
-        <svg viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        <svg viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" id="svg-7" @mouseover="changeColor7" @mouseleave="resetColor"
              xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
              style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -144,7 +182,7 @@
               <g id="clipboard-paste"> </g>
               <g id="clipboard-copy"> </g>
               <g id="Layer1"> </g> </g> </g></svg>
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000" id="svg-8" @mouseover="changeColor8" @mouseleave="resetColor">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier"><title>file_type_pgsql</title>
@@ -161,7 +199,7 @@
                 style="fill:#fff"></path>
           </g>
         </svg>
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" id="svg-9" @mouseover="changeColor9" @mouseleave="resetColor">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
@@ -185,15 +223,15 @@
             </defs>
           </g>
         </svg>
-        <svg fill="#000000" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+        <svg fill="#009688" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" id="svg-10" @mouseover="changeColor10" @mouseleave="resetColor">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
-            <path
-                d="M12 0C5.375 0 0 5.375 0 12c0 6.627 5.375 12 12 12 6.626 0 12-5.373 12-12 0-6.625-5.373-12-12-12zm-.624 21.62v-7.528H7.19L13.203 2.38v7.528h4.029L11.376 21.62z"></path>
+            <path d="M12 0C5.375 0 0 5.375 0 12c0 6.627 5.375 12 12 12 6.626 0 12-5.373 12-12 0-6.625-5.373-12-12-12zm-.624 21.62v-7.528H7.19L13.203 2.38v7.528h4.029L11.376 21.62z"></path>
           </g>
         </svg>
-        <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+
+        <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" id="svg-11" @mouseover="changeColor11" @mouseleave="resetColor"
              xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -224,7 +262,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Protest+Riot&display=swap');
 
 svg {
-  width: 100px;
+  width: 8%;
   height: auto;
   transition: width 0.3s ease;
 
@@ -241,13 +279,16 @@ svg:hover {
   background: #e16b40;
   position: absolute;
   left: 50%;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease, background-color 0.3s ease;
   transform: translateX(-50%);
 }
-.skill:hover + .line{
+
+.container:hover .line {
   width: 8%;
 
 }
+
+
 
 .svg-container {
   display: flex;
@@ -270,11 +311,10 @@ svg:hover {
   transition: box-shadow 0.3s ease;
 
 }
-.container:hover {
-  box-shadow: 0 0 80px rgba(0, 0, 0, 0.3), /* внешняя тень */
-  inset 0 0 10px rgba(255, 255, 255, 0.5); /* внутренняя тень белого цвета */
-}
 
+.container:hover {
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.3), /* внешняя тень */ inset 0 0 10px rgba(255, 255, 255, 0.5); /* внутренняя тень белого цвета */
+}
 
 
 .box {

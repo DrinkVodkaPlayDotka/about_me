@@ -108,7 +108,7 @@ ol {
 }
 
 .a2-text{
-  font-size: 1.5vh;
+  font-size: 0.9vw;
   font-family: 'Space Mono', monospace;
   color: #c9c7c7;
 }
@@ -128,7 +128,7 @@ ol {
   position: absolute;
   top: 120%;
   left: 60%;
-  height: 30vh;
+  height: 16vw;
   width: auto;
   border-radius: 5%;
   z-index: 1001;
@@ -137,14 +137,14 @@ ol {
 
 .square {
   position: absolute;
-  top: 122%;
+  top: 123%;
   left: 62%;
   z-index: 1000;
-  width: 30vh;
+  width: 16vw;
   border-radius: 5%;
   border: 2px solid #5da1ff;
 
-  height: 30vh;
+  height: 16vw;
   transition: transform 0.3s ease;
 
 }

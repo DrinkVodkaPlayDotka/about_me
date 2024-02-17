@@ -36,24 +36,41 @@ li{
   list-style:none;
 
 }
-.con{
+
+
+.con {
   position: absolute;
   top: calc(100% - 80% - 17%);
-  left: 60%;
+  left: 50%;
   transform: translateX(-50%);
+  font-size: 4vh;
+  font-family: 'Space Mono', monospace;
+  color: #f8f5f5;
+  animation: slideAndColorChange 1.5s infinite;
 }
+
 .container {
 
   position: relative;
   margin-top: 10%;
-  margin-left: -10%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60vh;
   text-align: center;
   width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Горизонтальное смещение, вертикальное смещение, размытие, цвет */
+  transition: box-shadow 0.3s ease ,transform 0.3s ease;
 }
+
+.container:hover {
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.7); /* оранжевая тень */
+  transform: scale(0.95); /* увеличение размера контейнера при наведении */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* добавление плавного перехода */
+  border-radius: 10px; /* добавление скругленных углов */
+}
+
+
 .li{
   margin-bottom: 5vh;
 }
@@ -64,11 +81,14 @@ li{
 .input-field.email {
   height: 2rem;
   width: 250px;
+  color: #FFA500;
   margin-left: -48%;
 }
 .input-field.area {
   height: 10rem;
   width: 500px;
+  color: #FFA500;
+
 
 }
 .input-field {
@@ -85,19 +105,21 @@ li{
   box-shadow:
       rgba(255, 165, 0, 0.4) 0px 2px 4px,
       rgba(255, 165, 0, 0.3) 0px 7px 13px -3px,
-      rgba(255, 165, 0, 0.2) 0px -3px 0px inset; /* Оранжевая тень */
+      rgba(255, 165, 0, 0.2) 0px -3px 0px inset;
 }
 .line{
   position: absolute;
   width: 5px;
   height: 35vh;
-  right: 60vh;
+  right: 30%;
   background-image: linear-gradient(to bottom, #ffffff, #cccccc, #ffa500); /* Градиентный фон */
   animation: colorChange 10s infinite alternate;
 
 }
+
 input[type="email"]::placeholder {
     color: #FFA500;
+    font-family:  monospace;
     outline:none;
 }
 textarea[type="message"]::placeholder {
