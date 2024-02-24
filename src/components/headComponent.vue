@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import {onMounted, onUnmounted, ref} from "vue";
 
+import {useI18n} from "vue-i18n";
+
+const {t} = useI18n({useScope: 'global'})
+
 const show = ref(false)
 const orange_first = ref(true)
 const orange_second = ref(false)
@@ -19,7 +23,7 @@ const orange_t = () => {
 const orange_fe = () => {
   orange_fourth.value = (!orange_first.value && !orange_second.value && !orange_third.value && window.scrollY < 3000)
 }
-const orange_fi = () =>{
+const orange_fi = () => {
   orange_five.value = (!orange_first.value && !orange_second.value && !orange_third.value && !orange_fourth.value && window.scrollY < 4000)
 
 }
@@ -35,7 +39,8 @@ onMounted(() => {
   window.addEventListener('scroll', orange_fi);
 });
 
-onUnmounted(() => {  window.removeEventListener('scroll', orange_s);
+onUnmounted(() => {
+  window.removeEventListener('scroll', orange_s);
 
   window.removeEventListener('scroll', showTest);
   window.removeEventListener('scroll', orange_f);
@@ -45,8 +50,6 @@ onUnmounted(() => {  window.removeEventListener('scroll', orange_s);
   window.removeEventListener('scroll', orange_fi);
 
 
-
-
 });
 const scrollToTop = () => {
   window.scrollTo({top: 0, behavior: 'smooth'})
@@ -54,15 +57,15 @@ const scrollToTop = () => {
 const scrollToAbout = () => {
   window.scrollTo({top: 700, behavior: 'smooth'})
 }
-const scrollToSkills = () =>{
+const scrollToSkills = () => {
   window.scrollTo({top: 1500, behavior: 'smooth'})
 
 }
-const scrollToProjects = () =>{
+const scrollToProjects = () => {
   window.scrollTo({top: 2400, behavior: 'smooth'})
 
 }
-const scrollToCon = () =>{
+const scrollToCon = () => {
   window.scrollTo({top: 3000, behavior: 'smooth'})
 
 }
@@ -72,11 +75,13 @@ const scrollToCon = () =>{
   <header class="fix" :class="{ 'box2': !show, 'box1': show }">
     <ol class="nav">
 
-      <li class="list onClick" @click="scrollToTop" :class="{'orange': orange_first}"><a>literally me </a> </li>
-      <li class="list onClick" @click="scrollToAbout" :class="{'orange': orange_second}"><a>about me </a> </li>
-      <li class="list onClick" @click="scrollToSkills" :class="{'orange': orange_third}"><a>Skills </a> </li>
-      <li class="list onClick" @click="scrollToProjects" :class="{'orange': orange_fourth}"><a>Projects </a> </li>
-      <li class="bn39 onClick r" @click="scrollToCon"><button :class="{'orange2': orange_five}" >CONNECT</button></li>
+      <li class="list onClick" @click="scrollToTop" :class="{'orange': orange_first}"><a>{{$t('header.first')}} </a></li>
+      <li class="list onClick" @click="scrollToAbout" :class="{'orange': orange_second}"><a>{{$t('header.second')}} </a></li>
+      <li class="list onClick" @click="scrollToSkills" :class="{'orange': orange_third}"><a>{{$t('header.third')}}</a></li>
+      <li class="list onClick" @click="scrollToProjects" :class="{'orange': orange_fourth}"><a>{{$t('header.fourth')}} </a></li>
+      <li class="bn39 onClick r" @click="scrollToCon">
+        <button :class="{'orange2': orange_five}">{{$t('header.five')}}</button>
+      </li>
 
     </ol>
 
@@ -89,7 +94,7 @@ const scrollToCon = () =>{
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
 
 button {
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, .5);
   border: none;
   background-color: transparent;
   font-size: 30px;
@@ -101,32 +106,35 @@ button {
   right: 2%;
 }
 
-button:before{
-  content:"";
-  position :absolute;
-  width:24px;
-  height:24px;
-  top:-5px;
-  left:-5px;
-  border-top:2px solid tomato;
-  border-left:2px solid tomato;
-  transition:all 0.25s;
+button:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: -5px;
+  left: -5px;
+  border-top: 2px solid tomato;
+  border-left: 2px solid tomato;
+  transition: all 0.25s;
 }
-button:hover:before ,button:hover:after{
-  width:104%;
-  height:110%;
+
+button:hover:before, button:hover:after {
+  width: 104%;
+  height: 110%;
 }
-button:after{
-  content:"";
-  position :absolute;
-  width:24px;
-  height:24px;
-  bottom:-5px;
-  right:-5px;
-  border-bottom:2px solid tomato;
-  border-right:2px solid tomato;
-  transition:all 0.30s;
+
+button:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  bottom: -5px;
+  right: -5px;
+  border-bottom: 2px solid tomato;
+  border-right: 2px solid tomato;
+  transition: all 0.30s;
 }
+
 .nav {
   font-family: 'Titillium Web';
   text-transform: uppercase;
@@ -148,7 +156,7 @@ button:after{
 
 .nav a {
   padding: .12em .8em;
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, .5);
   position: relative;
   text-decoration: none;
   font-size: 20px;
@@ -183,23 +191,26 @@ button:after{
 }
 
 .nav a:hover:before,
-.nav a:hover:after{
-  transform: translate(0,0);
+.nav a:hover:after {
+  transform: translate(0, 0);
   opacity: 1;
 }
 
 .nav a:hover {
   color: #f37123;
 }
+
 .fix {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1002;
 }
-.right{
+
+.right {
   margin-right: 15%;
 }
+
 .onClick {
   cursor: pointer;
   user-select: none;
@@ -235,18 +246,20 @@ ol {
   margin-left: 30px;
 }
 
-.orange a{
-  color: #ee8241 ;
+.orange a {
+  color: #ee8241;
   cursor: pointer;
 
 
 }
-.orange2{
+
+.orange2 {
   color: #f16815;
   cursor: pointer;
 
 
 }
+
 .list {
   margin-left: 5%;
   margin-top: 1%;
