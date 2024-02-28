@@ -92,6 +92,7 @@ const scrollToCon = () => {
 @import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
 button {
   color: rgba(255, 255, 255, .5);
@@ -234,7 +235,7 @@ ol {
   list-style-type: none;
   display: flex;
   color: white;
-  font-family: 'Protest Riot', sans-serif;
+  font-family: "Kode Mono", monospace;
 }
 
 .me {

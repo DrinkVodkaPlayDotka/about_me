@@ -5,5 +5,23 @@
     "third": "Skills",
     "fourth": "Projects",
     "five": "CONNECT"
+  },
+  "me": {
+    "i": "I'm",
+    "name": "Misha Stepanov.",
+    "with": "With",
+    "and": "and",
+    "f": "I create interfaces that make the user experience more enjoyable than browsing kitties on the internet.",
+    "s": "Let me turn your project into a quiet paradise for your eyes and fingers."
+  },
+  "about": {
+    "Ab": "About me",
+    "hi": "Hi folks, what's up?",
+    "im": " Im full stack web developer who wants to explore every tech stack.",
+    "y1": "I go to a badass university called ",
+    "y2": "YSTU",
+    "skill": "My goal is to become a highly skilled developer",
+    "work": "Here are some of the technologies I've been working with lately:"
+
   }
 }

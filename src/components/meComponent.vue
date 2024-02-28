@@ -1,25 +1,27 @@
 <template>
   <div class="container">
     <div class="box">
-      <span class="hi-text" @mouseover="changeText"> {{ text }} <span class="smiley">{{smiley}}</span>. I'm  </span>
-      <div class="pad name-text" @mouseover="changeText">Misha Stepanov.</div>
-      <div class="pad a1-text">With
+      <span class="hi-text" @mouseover="changeText"> {{ text }} <span class="smiley">{{smiley}}</span>. {{$t('me.i')}}  </span>
+      <div class="pad name-text" @mouseover="changeText">{{$t('me.name')}} </div>
+      <div class="pad a1-text">{{$t('me.with')}}
         <a class="disable-link" href="https://vuejs.org/"  target="_blank">
-        <span class="gradient-text-vue">VueJS</span> </a> and
+        <span class="gradient-text-vue">VueJS</span> </a> {{$t('me.and')}}
         <a class="disable-link" href="https://fastapi.tiangolo.com/"  target="_blank">
         <span class="gradient-text-fast">FastAPI</span>
         </a>
       </div>
 
-        <div class="pad a2-text"> I create interfaces that make the user experience more enjoyable than browsing kitties on the internet.</div>
-       <div class="a3-text">Let me turn your project into a quiet paradise for your eyes and fingers.</div>
+        <div class="pad a2-text"> {{$t('me.f')}} </div>
+       <div class="a3-text">{{$t('me.s')}} </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
+import {useI18n} from "vue-i18n";
 
+const {t} = useI18n({useScope: 'global'})
 const text = ref('Hey, everybody');
 const smiley = ref('👋');
 

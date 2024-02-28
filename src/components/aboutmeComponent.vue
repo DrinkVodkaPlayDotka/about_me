@@ -1,18 +1,20 @@
 <script setup lang="ts">
+import {useI18n} from "vue-i18n";
 
+const {t} = useI18n({useScope: 'global'})
 </script>
 
 <template>
     <div class="container">
       <div class="box">
-        <div class="a1-text pad">About me</div>
+        <div class="a1-text pad">{{$t('about.Ab')}}</div>
         <img class="me" src="/assets/me/photo_2022-11-20_21-43-10.jpg" alt="Описание изображения">
         <div class="square"></div>
-        <div class="a2-text pad">Hi, my name is Misha Stepanov,<br>
-          crazy full stack web developer who wants to explore every tech stack.</div>
-        <div class="a2-text pad">I go to a badass university called  <a class="disable-link" href="https://ystu.ru/"  target="_blank"><span class="YSTU">YSTU </span></a>.</div>
-        <div class="a2-text pad">My goal is to become a highly skilled web developer</div>
-        <div class="a2-text pad">Here are some of the technologies I've been working with lately:</div>
+        <div class="a2-text pad">{{$t('about.hi')}}<br>
+          {{$t('about.im')}}</div>
+        <div class="a2-text pad">{{$t('about.y1')}}<a class="disable-link" href="https://ystu.ru/"  target="_blank"><span class="YSTU">{{$t('about.y2')}} </span></a>.</div>
+        <div class="a2-text pad">{{$t('about.skill')}}</div>
+        <div class="a2-text pad">{{$t('about.work')}}</div>
         <div class="lists-container">
 
         <ol>

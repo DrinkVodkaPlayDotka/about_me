@@ -92,8 +92,6 @@ const copyEmail = () => {
 }
 
 .toggle-button-cover {
-  transform: rotate(90deg);
-
   display: table-cell;
   position: relative;
   width: 200px;
@@ -104,6 +102,7 @@ const copyEmail = () => {
 
 .knobs,
 .layer {
+
   position: absolute;
   top: 0;
   right: 0;
@@ -149,6 +148,8 @@ const copyEmail = () => {
 }
 
 #button-3 .knobs:before {
+  transform: rotate(-90deg);
+
   content: "RU";
   position: absolute;
   top: 4px;
@@ -167,11 +168,10 @@ const copyEmail = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: rotate(-90deg);
 }
 
 #button-3 .checkbox:active + .knobs:before {
-  width: 36px;
+  width: 20px;
   border-radius: 2px;
 }
 
@@ -184,7 +184,6 @@ const copyEmail = () => {
   left: 50px;
   background-color: #5da1ff;
   color: white;
-  transform: rotate(-90deg);
 }
 
 #button-3 .checkbox:checked ~ .layer {
@@ -192,6 +191,8 @@ const copyEmail = () => {
 }
 
 .fixb {
+  transform: rotate(90deg);
+
   position: fixed;
   bottom: 0px;
   left: -4.3rem;

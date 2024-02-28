@@ -2,7 +2,7 @@
 import {ref} from "vue";
 
 let photos: string[] = ["http://kalinkovichi.globalmarket.by/wp-content/themes/globalmarket/thumb.php?src=http://kalinkovichi.globalmarket.by/wp-content/themes/globalmarket/img/default_image.jpg&w=144&h=88"];
-let disc: string[] = ["Шняга шнядная,жизнь общажная", "а тут телеграм бота на c# и всяё такое"]
+let disc: string[] = ["Шняга шняжная,жизнь общажная", "а тут телеграм бота на c# и всяё такое"]
 const currentPhoto = ref<number>(0);
 const anim = ref<boolean>(false);
 const checkEl = ref<boolean>(false)

@@ -25,6 +25,10 @@
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+
 .list{
   position: absolute;
   left: 130vh;
@@ -39,12 +43,13 @@ li{
 
 
 .con {
+  font-family: "Kode Mono", monospace;
+
   position: absolute;
   top: calc(100% - 80% - 17%);
   left: 50%;
   transform: translateX(-50%);
   font-size: 4vh;
-  font-family: 'Space Mono', monospace;
   color: #f8f5f5;
   animation: slideAndColorChange 1.5s infinite;
 }
