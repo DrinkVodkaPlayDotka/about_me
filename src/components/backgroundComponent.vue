@@ -66,7 +66,7 @@ const copyEmail = () => {
           </g>
         </svg>
       </a>
-      <a href="https://github.com/DrinkVodkaPlayDotka" target="_blank">
+      <a href="https://github.com/HoldSnap" target="_blank">
         <svg class="github-icon" fill="#9b9b9b" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
